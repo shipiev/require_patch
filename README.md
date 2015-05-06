@@ -1,6 +1,6 @@
 # RequirePatch
 
-The gem adds a command "require_patch" that connects patches plugins. It used by my team to develop Redmine plugins
+The gem adds a command "require_patch" that includes plugin patches. It used by my team to develop Redmine plugins
 
 ## Installation
 
