@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = RequirePatch::VERSION
   spec.authors       = ['Roman Shipiev']
   spec.email         = ['roman@shipiev.pro']
-  spec.summary       = %q{The gem adds a command "require_patch" that connects patches plugins}
+  spec.summary       = %q{The gem adds a command "require_patch" that includes plugin patches}
   spec.description   = %q{The gem used by our team to develop Redmine plugins}
   spec.homepage      = 'https://github.com/shipiev/require_patch'
   spec.license       = 'MIT'
