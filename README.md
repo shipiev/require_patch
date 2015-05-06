@@ -18,16 +18,16 @@ Or install it yourself as:
 
 ## Usage
 
-  plugins/awesome_plugin/lib/awesome_plugin
-  plugins/awesome_plugin/lib/awesome_plugin/user_patch.rb
-  plugins/awesome_plugin/lib/awesome_plugin/issue_patch.rb
-  plugins/awesome_plugin/lib/awesome_plugin/user_controller_patch.rb
-  plugins/awesome_plugin/lib/awesome_plugin/issue_helper_patch.rb
+    plugins/awesome_plugin/lib/awesome_plugin
+    plugins/awesome_plugin/lib/awesome_plugin/user_patch.rb
+    plugins/awesome_plugin/lib/awesome_plugin/issue_patch.rb
+    plugins/awesome_plugin/lib/awesome_plugin/user_controller_patch.rb
+    plugins/awesome_plugin/lib/awesome_plugin/issue_helper_patch.rb
 
-  # plugins/awesome_plugin/init.rb
-  Rails.config.to_prepare do
-    require_patch 'awesome_plugin', 'user', 'issue', 'user_controller', 'issue_helper'
-  end
+    # plugins/awesome_plugin/init.rb
+    Rails.config.to_prepare do
+        require_patch 'awesome_plugin', 'user', 'issue', 'user_controller', 'issue_helper'
+    end
 
 ## Contributing
 
