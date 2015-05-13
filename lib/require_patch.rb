@@ -1,8 +1,7 @@
 require 'require_patch/version'
 
 module RequirePatch
-
-  # It includes resources patches for plugin
+  # It include patches to plugin
   # @param plugin_name [String] the plugin name
   # @param *resources [String] names of resources which will need patching
   # @example
@@ -21,4 +20,4 @@ module RequirePatch
   end
 end
 
-ActionDispatch::Reloader.send(:include, RequirePatch) unless ActionDispatch::Reloader.included_modules.include? RequirePatch
+ActionDispatch::Reloader.send(:include, ::RequirePatch) unless ActionDispatch::Reloader.included_modules.include? ::RequirePatch
