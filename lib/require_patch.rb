@@ -10,7 +10,11 @@ module RequirePatch
   #   end
   def require_patch(plugin_name, *resources)
     resources.each do |resource|  
-      require_dependency resource rescue Rails.logger.warn "Can't find '#{resource}' for require_dependency"
+      begin
+        require_dependency resource
+      rescue LoadError
+        Rails.logger.warn "Can't find '#{resource}' for require_dependency"
+      end
 
       resource_patch = [plugin_name, [resource, 'patch'].join('_')].join('/')
       resource_constant, resource_patch_constant = [resource, resource_patch].map(&:camelize).map(&:constantize)
