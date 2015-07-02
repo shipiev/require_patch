@@ -26,7 +26,9 @@ Or install it yourself as:
 
     # plugins/awesome_plugin/init.rb
     Rails.config.to_prepare do
-        require_patch 'awesome_plugin', 'user', 'issue', 'users_controller', 'issues_helper'
+        require_patch 'awesome_plugin', %w{user issue users_controller issues_helper}
+        require_patch 'awesome_plugin', ['form/builder'], skip_require_dependency: true
+        # or require_patch 'awesome_plugin', 'form/builder', skip_require_dependency: true
     end
 
 ## Contributing
