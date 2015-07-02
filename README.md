@@ -23,6 +23,7 @@ Or install it yourself as:
     plugins/awesome_plugin/lib/awesome_plugin/issue_patch.rb
     plugins/awesome_plugin/lib/awesome_plugin/users_controller_patch.rb
     plugins/awesome_plugin/lib/awesome_plugin/issues_helper_patch.rb
+    plugins/awesome_plugin/lib/awesome_plugin/form/builder_patch.rb
 
     # plugins/awesome_plugin/init.rb
     Rails.config.to_prepare do

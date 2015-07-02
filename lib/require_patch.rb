@@ -4,6 +4,7 @@ module RequirePatch
   # It include patches to plugin
   # @param plugin_name [String] the plugin name
   # @param resources [Array] names of resources which will need patching
+  # @param options [Hash] optional options
   # @example
   #   Rails.config.to_prepare do
   #     require_patch 'awesome_plugin', ['user', 'issue', 'user_controller', 'issue_helper']
