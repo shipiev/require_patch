@@ -32,9 +32,16 @@ Or install it yourself as:
         # or require_patch 'awesome_plugin', 'form/builder', skip_require_dependency: true
     end
 
+## Options
+
+    skip_require_dependency - block require_dependency resource (default: false)
+    dir - directory for patches (default: nil)
+    prefix - for patch-file (default: nil)
+    postfix - for patch-file (default: 'patch')
+
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/require_patch/fork )
+1. Fork it ( http://github.com/shipiev/require_patch/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
