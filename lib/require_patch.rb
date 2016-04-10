@@ -24,7 +24,7 @@ module RequirePatch
           require_dependency resource unless options[:skip_require_dependency]
 
           patch_name = [options[:prefix], resource, options[:postfix]].select(&:present?).join('_')
-          resource_patch = File.join *[plugin_name, options[:dir], patch_name].select(&:present?)
+          resource_patch = File.join *[plugin_name, options[:dir], patch_name].select(&:present?).map(&:to_s)
           resource_constant, resource_patch_constant = [resource, resource_patch].map(&:camelize).map(&:constantize)
 
           resource_constant.send(:include, resource_patch_constant) unless resource_constant.included_modules.include? resource_patch_constant
